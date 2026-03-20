@@ -1,0 +1,751 @@
+Microsoft Windows [Version 10.0.26200.7922]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\LOKESH D>node -v
+v24.14.0
+
+C:\Users\LOKESH D>npx -v
+11.9.0
+
+C:\Users\LOKESH D>cd C:\Users\LOKESH D\Brain-Tasks-App\dist
+
+C:\Users\LOKESH D\Brain-Tasks-App\dist>npx serve
+Need to install the following packages:
+serve@14.2.6
+Ok to proceed? (y) y
+
+   ┌────────────────────────────────────────┐
+   │                                        │
+   │   Serving!                             │
+   │                                        │
+   │   - Local:    http://localhost:3000    │
+   │   - Network:  http://172.20.0.1:3000   │
+   │                                        │
+   │   Copied local address to clipboard!   │
+   │                                        │
+   └────────────────────────────────────────┘
+
+ HTTP  20/3/2026 10:27:03 am ::1 GET /
+ HTTP  20/3/2026 10:27:03 am ::1 Returned 200 in 19 ms
+ HTTP  20/3/2026 10:27:03 am ::1 GET /assets/index-BHGiHu50.js
+ HTTP  20/3/2026 10:27:03 am ::1 GET /assets/index-DPTLVrPB.css
+ HTTP  20/3/2026 10:27:03 am ::1 Returned 200 in 7 ms
+ HTTP  20/3/2026 10:27:03 am ::1 Returned 200 in 5 ms
+
+ INFO  Gracefully shutting down. Please wait...
+Terminate batch job (Y/N)? y
+
+C:\Users\LOKESH D\Brain-Tasks-App\dist>cd..
+
+C:\Users\LOKESH D\Brain-Tasks-App>docker build -t brain-app
+ERROR: docker: 'docker buildx build' requires 1 argument
+
+Usage:  docker buildx build [OPTIONS] PATH | URL | -
+
+Run 'docker buildx build --help' for more information
+
+C:\Users\LOKESH D\Brain-Tasks-App>notepad Dockerfile
+
+C:\Users\LOKESH D\Brain-Tasks-App>notepad Dockerfile
+
+C:\Users\LOKESH D\Brain-Tasks-App>dir
+ Volume in drive C is Windows
+ Volume Serial Number is 2A99-05BD
+
+ Directory of C:\Users\LOKESH D\Brain-Tasks-App
+
+20-03-2026  10:41    <DIR>          .
+20-03-2026  10:06    <DIR>          ..
+20-03-2026  10:06    <DIR>          dist
+20-03-2026  10:41               209 Dockerfile.txt
+20-03-2026  10:06             1,801 README.md
+               2 File(s)          2,010 bytes
+               3 Dir(s)  56,398,807,040 bytes free
+
+C:\Users\LOKESH D\Brain-Tasks-App>ren Dockerfile.txt Dockerfile
+
+C:\Users\LOKESH D\Brain-Tasks-App>dir
+ Volume in drive C is Windows
+ Volume Serial Number is 2A99-05BD
+
+ Directory of C:\Users\LOKESH D\Brain-Tasks-App
+
+20-03-2026  10:42    <DIR>          .
+20-03-2026  10:06    <DIR>          ..
+20-03-2026  10:06    <DIR>          dist
+20-03-2026  10:41               209 Dockerfile
+20-03-2026  10:06             1,801 README.md
+               2 File(s)          2,010 bytes
+               3 Dir(s)  56,397,103,104 bytes free
+
+C:\Users\LOKESH D\Brain-Tasks-App>docker build -t brain-app
+ERROR: docker: 'docker buildx build' requires 1 argument
+
+Usage:  docker buildx build [OPTIONS] PATH | URL | -
+
+Run 'docker buildx build --help' for more information
+
+C:\Users\LOKESH D\Brain-Tasks-App>docker build -t brain-app .
+ERROR: error during connect: Head "http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/_ping": open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.
+
+C:\Users\LOKESH D\Brain-Tasks-App>cd..
+
+C:\Users\LOKESH D>docker version
+Client:
+ Version:           29.1.5
+ API version:       1.52
+ Go version:        go1.25.6
+ Git commit:        0e6fee6
+ Built:             Fri Jan 16 12:51:08 2026
+ OS/Arch:           windows/amd64
+ Context:           desktop-linux
+
+Server: Docker Desktop 4.58.0 (216728)
+ Engine:
+  Version:          29.1.5
+  API version:      1.52 (minimum version 1.44)
+  Go version:       go1.25.6
+  Git commit:       3b01d64
+  Built:            Fri Jan 16 12:48:42 2026
+  OS/Arch:          linux/amd64
+  Experimental:     false
+ containerd:
+  Version:          v2.2.1
+  GitCommit:        dea7da592f5d1d2b7755e3a161be07f43fad8f75
+ runc:
+  Version:          1.3.4
+  GitCommit:        v1.3.4-0-gd6d73eb8
+ docker-init:
+  Version:          0.19.0
+  GitCommit:        de40ad0
+
+C:\Users\LOKESH D>cd Brain-Tasks-App
+
+C:\Users\LOKESH D\Brain-Tasks-App>docker build -t brain-app
+ERROR: docker: 'docker buildx build' requires 1 argument
+
+Usage:  docker buildx build [OPTIONS] PATH | URL | -
+
+Run 'docker buildx build --help' for more information
+
+C:\Users\LOKESH D\Brain-Tasks-App>docker build -t brain-app .
+[+] Building 9.7s (9/9) FINISHED                       docker:desktop-linux
+ => [internal] load build definition from Dockerfile                   0.1s
+ => => transferring dockerfile: 248B                                   0.0s
+ => [internal] load metadata for docker.io/library/nginx:alpine        3.7s
+ => [auth] library/nginx:pull token for registry-1.docker.io           0.0s
+ => [internal] load .dockerignore                                      0.0s
+ => => transferring context: 2B                                        0.0s
+ => [1/3] FROM docker.io/library/nginx:alpine@sha256:f46cb72c7df02710  4.1s
+ => => resolve docker.io/library/nginx:alpine@sha256:f46cb72c7df02710  0.1s
+ => => sha256:c24026275c332ec39b54c7094c7ce6d97b0dd 20.25MB / 20.25MB  2.4s
+ => => sha256:c32126d2b96c212b17a4fa8384c2aaf3e3418d4 1.40kB / 1.40kB  1.1s
+ => => sha256:1f25242adbdb4bf04c16ac9fbe5385a46cf0f1f 1.21kB / 1.21kB  1.3s
+ => => sha256:1549d7aec9620db68aa7a5ea05aa08590d8f46598bb 403B / 403B  1.4s
+ => => sha256:e19aff8f2cce9241a3cbb1f501d16d9d76b7f22e7b5 952B / 952B  0.7s
+ => => sha256:593488f95c358628770935110ccf26bd7b3aba382b1 626B / 626B  0.7s
+ => => sha256:d2a46166eee6d30856269bbf4ad826481d04dd4 1.87MB / 1.87MB  1.1s
+ => => extracting sha256:d2a46166eee6d30856269bbf4ad826481d04dd4108ac  0.2s
+ => => extracting sha256:593488f95c358628770935110ccf26bd7b3aba382b10  0.0s
+ => => extracting sha256:e19aff8f2cce9241a3cbb1f501d16d9d76b7f22e7b54  0.0s
+ => => extracting sha256:1549d7aec9620db68aa7a5ea05aa08590d8f46598bb4  0.0s
+ => => extracting sha256:1f25242adbdb4bf04c16ac9fbe5385a46cf0f1fbee7d  0.0s
+ => => extracting sha256:c32126d2b96c212b17a4fa8384c2aaf3e3418d4b2988  0.0s
+ => => extracting sha256:c24026275c332ec39b54c7094c7ce6d97b0dde17bb91  0.6s
+ => [internal] load build context                                      0.4s
+ => => transferring context: 318.06kB                                  0.3s
+ => [2/3] RUN rm -rf /usr/share/nginx/html/*                           0.7s
+ => [3/3] COPY dist/ /usr/share/nginx/html/                            0.1s
+ => exporting to image                                                 0.7s
+ => => exporting layers                                                0.3s
+ => => exporting manifest sha256:3ea10f5a74da86702472627e086d7939854a  0.0s
+ => => exporting config sha256:010d1a389c7e4c9724905f44491c1021bc5de3  0.0s
+ => => exporting attestation manifest sha256:f0a1f56aa148a622be38c445  0.1s
+ => => exporting manifest list sha256:4c01cba2faaa26266442eae848a0de6  0.1s
+ => => naming to docker.io/library/brain-app:latest                    0.0s
+ => => unpacking to docker.io/library/brain-app:latest                 0.1s
+
+C:\Users\LOKESH D\Brain-Tasks-App>docker run -d -p 8080:80 brain-app
+67e3af2b23be946a5e7c509e0bda1d6bd7fdb4cff7c50c2977f2806329e6ebae
+
+C:\Users\LOKESH D\Brain-Tasks-App>docker tag brain-app lokeshdev7/brain-app
+
+C:\Users\LOKESH D\Brain-Tasks-App>docker push lokeshdev7/brain-app
+Using default tag: latest
+The push refers to repository [docker.io/lokeshdev7/brain-app]
+af1f25b65a3a: Pushed
+c32126d2b96c: Pushed
+e19aff8f2cce: Pushed
+c24026275c33: Pushed
+d2a46166eee6: Pushed
+a4302a90cb70: Pushed
+1549d7aec962: Pushed
+1f25242adbdb: Pushed
+001b7dbdeb12: Pushed
+589002ba0eae: Pushed
+593488f95c35: Pushed
+latest: digest: sha256:4c01cba2faaa26266442eae848a0de61ff2f6a8a41ae9e7a96acd8ac5139b688 size: 856
+
+C:\Users\LOKESH D\Brain-Tasks-App>docker run -d -p 8081:80 lokeshdev7/brain-app
+cff4d77e8f970e322f8a475e9fa6601fdc13b0086843d4542437703638960448
+
+C:\Users\LOKESH D\Brain-Tasks-App>kubctl get nodes
+'kubctl' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\LOKESH D\Brain-Tasks-App>cd..
+
+C:\Users\LOKESH D>kubectl get nodes
+E0320 11:09:37.749390    6096 memcache.go:265] "Unhandled Error" err="couldn't get current server API group list: the server could not find the requested resource"
+E0320 11:09:37.868358    6096 memcache.go:265] "Unhandled Error" err="couldn't get current server API group list: the server could not find the requested resource"
+E0320 11:09:37.876373    6096 memcache.go:265] "Unhandled Error" err="couldn't get current server API group list: the server could not find the requested resource"
+E0320 11:09:37.884722    6096 memcache.go:265] "Unhandled Error" err="couldn't get current server API group list: the server could not find the requested resource"
+E0320 11:09:37.891503    6096 memcache.go:265] "Unhandled Error" err="couldn't get current server API group list: the server could not find the requested resource"
+Error from server (NotFound): the server could not find the requested resource
+
+C:\Users\LOKESH D>kubectl config get-contexts
+CURRENT   NAME             CLUSTER          AUTHINFO         NAMESPACE
+          docker-desktop   docker-desktop   docker-desktop
+
+C:\Users\LOKESH D>kubectl config use-context docker-desktop
+Switched to context "docker-desktop".
+
+C:\Users\LOKESH D>kubectl cluster-info
+Kubernetes control plane is running at https://kubernetes.docker.internal:6443
+CoreDNS is running at https://kubernetes.docker.internal:6443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+
+To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
+
+C:\Users\LOKESH D>kubectl get nodes
+NAME             STATUS   ROLES           AGE   VERSION
+docker-desktop   Ready    control-plane   44d   v1.34.1
+
+C:\Users\LOKESH D>kubectl get nodes
+NAME             STATUS   ROLES           AGE     VERSION
+docker-desktop   Ready    control-plane   7m15s   v1.34.1
+
+C:\Users\LOKESH D>cd Brain-Tasks-App
+
+C:\Users\LOKESH D\Brain-Tasks-App>notepad deployment.yaml
+
+C:\Users\LOKESH D\Brain-Tasks-App>kubectl apply -f deployment.yaml
+deployment.apps/brain-app created
+
+C:\Users\LOKESH D\Brain-Tasks-App>kubectl get pods
+NAME                         READY   STATUS              RESTARTS   AGE
+brain-app-55977c79c7-8jl6j   1/1     Running             0          9s
+brain-app-55977c79c7-w54mx   0/1     ContainerCreating   0          9s
+
+C:\Users\LOKESH D\Brain-Tasks-App>kubectl expose deployment brain-app --type=NodePort --port=80
+service/brain-app exposed
+
+C:\Users\LOKESH D\Brain-Tasks-App>kubectl get svc
+NAME         TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE
+brain-app    NodePort    10.102.225.19   <none>        80:31036/TCP   11s
+kubernetes   ClusterIP   10.96.0.1       <none>        443/TCP        12m
+
+C:\Users\LOKESH D\Brain-Tasks-App>cd..
+
+C:\Users\LOKESH D>dir
+ Volume in drive C is Windows
+ Volume Serial Number is 2A99-05BD
+
+ Directory of C:\Users\LOKESH D
+
+20-03-2026  10:06    <DIR>          .
+20-01-2026  20:58    <DIR>          ..
+14-02-2026  21:52    <DIR>          .aws
+24-01-2026  22:31             2,291 .bash_history
+03-02-2026  20:42    <DIR>          .cagent
+03-02-2026  20:42    <DIR>          .config
+20-03-2026  12:16    <DIR>          .docker
+01-03-2026  15:51                59 .gitconfig
+20-03-2026  11:11    <DIR>          .kube
+24-01-2026  16:42                20 .lesshst
+12-02-2026  23:09    <DIR>          .minikube
+29-11-2025  21:20                 8 .python_history
+17-02-2026  21:05    <DIR>          .ssh
+09-11-2025  13:29    <DIR>          .vscode
+20-03-2026  11:23    <DIR>          Brain-Tasks-App
+22-12-2024  09:39    <DIR>          Contacts
+01-03-2025  21:02    <DIR>          CrossDevice
+15-02-2026  22:59    <DIR>          Desktop
+08-05-2022  20:13            29,764 Dissertation II Review 1.docx
+21-01-2026  20:39    <DIR>          Documents
+20-03-2026  10:23    <DIR>          Downloads
+01-05-2025  12:15    <DIR>          Dropbox
+22-12-2024  09:39    <DIR>          Favorites
+24-01-2026  16:58    <DIR>          git-project
+20-01-2026  20:56    <DIR>          gut-demo
+28-04-2022  19:07         3,217,779 IMG_20220428_134647.jpg
+28-04-2022  19:07         3,272,289 IMG_20220428_134655.jpg
+28-04-2022  19:06         3,236,942 IMG_20220428_134701.jpg
+28-04-2022  19:08         3,132,865 IMG_20220428_134712.jpg
+28-04-2022  19:07         4,210,941 IMG_20220428_134723.jpg
+28-04-2022  19:06         3,828,386 IMG_20220428_134951.jpg
+01-03-2026  15:47    <DIR>          jenkins-task2
+22-12-2024  09:39    <DIR>          Links
+30-11-2025  14:50                37 main.py
+22-12-2024  09:39    <DIR>          Music
+03-02-2026  22:36    <DIR>          my-docker-website
+05-02-2026  23:38    <DIR>          nginx-custom
+21-12-2025  12:25    <DIR>          OneDrive
+22-12-2024  09:39    <DIR>          Saved Games
+22-12-2024  09:39    <DIR>          Searches
+04-03-2026  22:45    <DIR>          terraform-ec2
+04-03-2026  23:32    <DIR>          terraform-nginx
+04-03-2026  23:50               181 terraform.tfstate
+22-12-2024  09:39    <DIR>          Videos
+              13 File(s)     20,931,562 bytes
+              31 Dir(s)  47,697,915,904 bytes free
+
+C:\Users\LOKESH D>cd Brain-Task-App
+The system cannot find the path specified.
+
+C:\Users\LOKESH D>cd Brain-Tasks-App
+
+C:\Users\LOKESH D\Brain-Tasks-App>git remote -v
+origin  https://github.com/Vennilavanguvi/Brain-Tasks-App (fetch)
+origin  https://github.com/Vennilavanguvi/Brain-Tasks-App (push)
+
+C:\Users\LOKESH D\Brain-Tasks-App>cd..
+
+C:\Users\LOKESH D>git remote set-url origin https://github.com/lokeshdev7/Brain-Tasks-App.git
+fatal: not a git repository (or any of the parent directories): .git
+
+C:\Users\LOKESH D>cd Brain-Tasks-App
+
+C:\Users\LOKESH D\Brain-Tasks-App>git remote set-url origin https://github.com/dlokeshmech-glitch/Brain-Tasks-App.git
+
+C:\Users\LOKESH D\Brain-Tasks-App>git add .
+
+C:\Users\LOKESH D\Brain-Tasks-App>git commit -m "initial commit"
+[main f2fbc25] initial commit
+ 2 files changed, 31 insertions(+)
+ create mode 100644 Dockerfile
+ create mode 100644 deployment.yaml
+
+C:\Users\LOKESH D\Brain-Tasks-App>git push -u origin main
+Enumerating objects: 15, done.
+Counting objects: 100% (15/15), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (14/14), done.
+Writing objects: 100% (15/15), 102.52 KiB | 17.09 MiB/s, done.
+Total 15 (delta 0), reused 11 (delta 0), pack-reused 0 (from 0)
+To https://github.com/dlokeshmech-glitch/Brain-Tasks-App.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+C:\Users\LOKESH D\Brain-Tasks-App>cd..
+
+C:\Users\LOKESH D>aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 064863113663.dkr.ecr.ap-south-1.amazonaws.com
+Login Succeeded
+
+C:\Users\LOKESH D>kubectl apply -f deployment.yaml
+error: the path "deployment.yaml" does not exist
+
+C:\Users\LOKESH D>cd Brain-Tasks-App
+
+C:\Users\LOKESH D\Brain-Tasks-App>kubectl apply -f deployment.yaml
+deployment.apps/brain-app unchanged
+
+C:\Users\LOKESH D\Brain-Tasks-App>notepad deployment.yaml
+
+C:\Users\LOKESH D\Brain-Tasks-App>kubectl apply -f deployment.yaml
+deployment.apps/brain-app configured
+
+C:\Users\LOKESH D\Brain-Tasks-App>kubectl rollout restart deployment brain-app
+deployment.apps/brain-app restarted
+
+C:\Users\LOKESH D\Brain-Tasks-App>kubectl get pods
+NAME                         READY   STATUS             RESTARTS   AGE
+brain-app-55977c79c7-8jl6j   1/1     Running            0          4h10m
+brain-app-55977c79c7-w54mx   1/1     Running            0          4h10m
+brain-app-6d7458bd84-g5577   0/1     InvalidImageName   0          8s
+
+C:\Users\LOKESH D\Brain-Tasks-App>notepad deployment.yaml
+
+C:\Users\LOKESH D\Brain-Tasks-App>kubectl apply -f deployment.yaml
+deployment.apps/brain-app configured
+
+C:\Users\LOKESH D\Brain-Tasks-App>kubectl rollout restart deployment brain-app
+deployment.apps/brain-app restarted
+
+C:\Users\LOKESH D\Brain-Tasks-App>kubectl delete pod brain-app-6d7458bd84-g5577
+Error from server (NotFound): pods "brain-app-6d7458bd84-g5577" not found
+
+C:\Users\LOKESH D\Brain-Tasks-App>kubectl get pods
+NAME                         READY   STATUS         RESTARTS   AGE
+brain-app-55977c79c7-8jl6j   1/1     Running        0          4h12m
+brain-app-55977c79c7-w54mx   1/1     Running        0          4h12m
+brain-app-5764fdccdd-9flkq   0/1     ErrImagePull   0          15s
+
+C:\Users\LOKESH D\Brain-Tasks-App>kubectl create secret docker-registry ecr-secret \
+error: exactly one NAME is required, got 2
+See 'kubectl create secret docker-registry -h' for help and examples
+
+C:\Users\LOKESH D\Brain-Tasks-App>kubectl create secret docker-registry ecr-secret --docker-server=064863113663.dkr.ecr.ap-south-1.amazonaws.com --docker-username=AWS --docker-password=$(aws ecr get-login-password --region ap-south-1) --docker-email=none
+error: unknown flag: --region
+See 'kubectl create secret docker-registry --help' for usage.
+
+C:\Users\LOKESH D\Brain-Tasks-App>kubectl create secret docker-registry ecr-secret --docker-server=064863113663.dkr.ecr.ap-south-1.amazonaws.com --docker-username=AWS --docker-password=$(aws ecr get-login-password --region ap-south-1) --docker-email=none
+error: unknown flag: --region
+See 'kubectl create secret docker-registry --help' for usage.
+
+C:\Users\LOKESH D\Brain-Tasks-App>aws ecr get-login-password --region ap-south-1 > token.txt
+
+C:\Users\LOKESH D\Brain-Tasks-App>notepad token.txt
+
+C:\Users\LOKESH D\Brain-Tasks-App>eyJwYXlsb2FkIjoiWC94bWJwcFgzMVRXaEdWMGtkWlFrTWUyTjdRM1VaYm1XRjNtQ0tnNVRZdG8vUS92YTl0OUpsL2UwR1k3SEZxK0s2aTBiSkF4TWR6WUoySXp0N3gyR0pxNHlraDB4d3UvOE1zRlpvSngrMHFxMnNRR2NnQVY4YURDT3FlZ2ZJUlF4cmhRcHVYRjM0TUFUVTBKaTM5RitNQnlmY3JGenU3UXZPcVA5WWdjSU1CY1FmQTBjdnRyTEN3ZlFGODQ2QnZHVlIvSXRUMnExWXZldE15Zm1XajhlSkxMeGw4dzI0Smk0MkFqM0lRWlZPUEZuZUJCV0tnNXFvTUJ1YVNwMUJwMXd4dzFzSFZqajFuc1ZoeEY4NFh0MkZPRnJPeEx6MUhxZlJqZTlVL0JWejZqandMSXdrT2daQzVzbGptMWVpNzZ1blRvLy8rN2xYWGNybDU3N3d1LzlMWkJZTUFoQ05LRFhJN2ZzMGJGSGFMVlFGZ1JwQUg0MzZ5VG9ndDNBU2txVURYRWxwN25iMGNkODVnTFY3dDBNdkNDanIreHdqWlk4M29QLzJqS3h5dTFIOFJIWUxRdU90T3puSTMybGhKME54UWQzaCtUWjhIRVRxV05ja1JOem9CZkp4V1dIRUM1RGRESWJXSExiUXYxRy9kMlZIZU9aQzF2dGxVZlNlOThNTklueVBwak44VkRST1h2bEl0eVpiRFRKZ3p1QjhRc2ljRktOMFcxSmViUHdyVnBSMHBhNWJheHBJNm5zS2h1eGZvQXo2SE5FOEJQSDBoRzZJSmRxa3BsdThRUVZqRVdEaDg0eWhTK3c3K0tYNWUxb1pWeUorQXBid3NMY3REWGd5MzVWR08zWmowOTI2ZFNlQmd2SWJtYWtYT2srcVBYWGFEdGR4RVcySGFRUnR6Slo3S2hRT2o1SFpuclpoMjhhd1FrUUZhcDg2L0Z6SkJBRitBa3ZRVk9XVTN2U3JlNlltUjVkK3ZKRDNvRGxpRTV0L0ZzREpuMWRxWmk4bUVNVEV2bUV1OUFWSXN3aHdIdEJ6L2xZKy9HRXZoS2hpZmttRFY0b0l1QTc1VGtaNERqV0ozS0ExM2kvS0Q4Y28zZjdZU0gycS9Tc2lKdjZzOXRtaVdyZW9pV0I3eVJIaG5FOHNRMmtWNkhXOXpMZmxyeGx3cWUwTWV0T3hhc3lZS1pZam95TXBmNDNyTUM1L1N1SFc2dWFqU0twQkp0VmpSSVpoLzF0UjRJZUptU2xMMy94c2g5Z0RHcUk3STZqcElwVUl0L3JNUzVEMFlSY25QSlVrcEcwc289IiwiZGF0YWtleSI6IkFRSUJBSGlIV2FZVG5SVVdDYm56KzdMdk1HK0FQdlRIekhsQlVROUZxRW1WMjZCZHd3R3FXbmZieFl1V2k4Tm5oYjlJZWtPQUFBQUFmakI4QmdrcWhraUc5dzBCQndhZ2J6QnRBZ0VBTUdnR0NTcUdTSWIzRFFFSEFUQWVCZ2xnaGtnQlpRTUVBUzR3RVFRTWJueEUrOFl2K0F3YVJYY2RBZ0VRZ0RzS05BWkZmaHBlanJlN0ZITHlZVHdvb3BxVnBaRVVKaWpjQ1BkRFlrcE8yU2g0VHlpekFMNkdjb1FQVHNQaFRhaThoVklFaEJzaUYvWjY5dz09IiwidmVyc2lvbiI6IjIiLCJ0eXBlIjoiREFUQV9LRVkiLCJleHBpcmF0aW9uIjoxNzc0MDQ0NjQ5fQ==
+'eyJwYXlsb2FkIjoiWC94bWJwcFgzMVRXaEdWMGtkWlFrTWUyTjdRM1VaYm1XRjNtQ0tnNVRZdG8vUS92YTl0OUpsL2UwR1k3SEZxK0s2aTBiSkF4TWR6WUoySXp0N3gyR0pxNHlraDB4d3UvOE1zRlpvSngrMHFxMnNRR2NnQVY4YURDT3FlZ2ZJUlF4cmhRcHVYRjM0TUFUVTBKaTM5RitNQnlmY3JGenU3UXZPcVA5WWdjSU1CY1FmQTBjdnRyTEN3ZlFGODQ2QnZHVlIvSXRUMnExWXZldE15Zm1XajhlSkxMeGw4dzI0Smk0MkFqM0lRWlZPUEZuZUJCV0tnNXFvTUJ1YVNwMUJwMXd4dzFzSFZqajFuc1ZoeEY4NFh0MkZPRnJPeEx6MUhxZlJqZTlVL0JWejZqandMSXdrT2daQzVzbGptMWVpNzZ1blRvLy8rN2xYWGNybDU3N3d1LzlMWkJZTUFoQ05LRFhJN2ZzMGJGSGFMVlFGZ1JwQUg0MzZ5VG9ndDNBU2txVURYRWxwN25iMGNkODVnTFY3dDBNdkNDanIreHdqWlk4M29QLzJqS3h5dTFIOFJIWUxRdU90T3puSTMybGhKME54UWQzaCtUWjhIRVRxV05ja1JOem9CZkp4V1dIRUM1RGRESWJXSExiUXYxRy9kMlZIZU9aQzF2dGxVZlNlOThNTklueVBwak44VkRST1h2bEl0eVpiRFRKZ3p1QjhRc2ljRktOMFcxSmViUHdyVnBSMHBhNWJheHBJNm5zS2h1eGZvQXo2SE5FOEJQSDBoRzZJSmRxa3BsdThRUVZqRVdEaDg0eWhTK3c3K0tYNWUxb1pWeUorQXBid3NMY3REWGd5MzVWR08zWmowOTI2ZFNlQmd2SWJtYWtYT2srcVBYWGFEdGR4RVcySGFRUnR6Slo3S2hRT2o1SFpuclpoMjhhd1FrUUZhcDg2L0Z6SkJBRitBa3ZRVk9XVTN2U3JlNlltUjVkK3ZKRDNvRGxpRTV0L0ZzREpuMWRxWmk4bUVNVEV2bUV1OUFWSXN3aHdIdEJ6L2xZKy9HRXZoS2hpZmttRFY0b0l1QTc1VGtaNERqV0ozS0ExM2kvS0Q4Y28zZjdZU0gycS9Tc2lKdjZzOXRtaVdyZW9pV0I3eVJIaG5FOHNRMmtWNkhXOXpMZmxyeGx3cWUwTWV0T3hhc3lZS1pZam95TXBmNDNyTUM1L1N1SFc2dWFqU0twQkp0VmpSSVpoLzF0UjRJZUptU2xMMy94c2g5Z0RHcUk3STZqcElwVUl0L3JNUzVEMFlSY25QSlVrcEcwc289IiwiZGF0YWtleSI6IkFRSUJBSGlIV2FZVG5SVVdDYm56KzdMdk1HK0FQdlRIekhsQlVROUZxRW1WMjZCZHd3R3FXbmZieFl1V2k4Tm5oYjlJZWtPQUFBQUFmakI4QmdrcWhraUc5dzBCQndhZ2J6QnRBZ0VBTUdnR0NTcUdTSWIzRFFFSEFUQWVCZ2xnaGtnQlpRTUVBUzR3RVFRTWJueEUrOFl2K0F3YVJYY2RBZ0VRZ0RzS05BWkZmaHBlanJlN0ZITHlZVHdvb3BxVnBaRVVKaWpjQ1BkRFlrcE8yU2g0VHlpekFMNkdjb1FQVHNQaFRhaThoVklFaEJzaUYvWjY5dz09IiwidmVyc2lvbiI6IjIiLCJ0eXBlIjoiREFUQV9LRVkiLCJleHBpcmF0aW9uIjoxNzc0MDQ0NjQ5fQ' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\LOKESH D\Brain-Tasks-App>eyJwYXlsb2FkIjoiWC94bWJwcFgzMVRXaEdWMGtkWlFrTWUyTjdRM1VaYm1XRjNtQ0tnNVRZdG8vUS92YTl0OUpsL2UwR1k3SEZxK0s2aTBiSkF4TWR6WUoySXp0N3gyR0pxNHlraDB4d3UvOE1zRlpvSngrMHFxMnNRR2NnQVY4YURDT3FlZ2ZJUlF4cmhRcHVYRjM0TUFUVTBKaTM5RitNQnlmY3JGenU3UXZPcVA5WWdjSU1CY1FmQTBjdnRyTEN3ZlFGODQ2QnZHVlIvSXRUMnExWXZldE15Zm1XajhlSkxMeGw4dzI0Smk0MkFqM0lRWlZPUEZuZUJCV0tnNXFvTUJ1YVNwMUJwMXd4dzFzSFZqajFuc1ZoeEY4NFh0MkZPRnJPeEx6MUhxZlJqZTlVL0JWejZqandMSXdrT2daQzVzbGptMWVpNzZ1blRvLy8rN2xYWGNybDU3N3d1LzlMWkJZTUFoQ05LRFhJN2ZzMGJGSGFMVlFGZ1JwQUg0MzZ5VG9ndDNBU2txVURYRWxwN25iMGNkODVnTFY3dDBNdkNDanIreHdqWlk4M29QLzJqS3h5dTFIOFJIWUxRdU90T3puSTMybGhKME54UWQzaCtUWjhIRVRxV05ja1JOem9CZkp4V1dIRUM1RGRESWJXSExiUXYxRy9kMlZIZU9aQzF2dGxVZlNlOThNTklueVBwak44VkRST1h2bEl0eVpiRFRKZ3p1QjhRc2ljRktOMFcxSmViUHdyVnBSMHBhNWJheHBJNm5zS2h1eGZvQXo2SE5FOEJQSDBoRzZJSmRxa3BsdThRUVZqRVdEaDg0eWhTK3c3K0tYNWUxb1pWeUorQXBid3NMY3REWGd5MzVWR08zWmowOTI2ZFNlQmd2SWJtYWtYT2srcVBYWGFEdGR4RVcySGFRUnR6Slo3S2hRT2o1SFpuclpoMjhhd1FrUUZhcDg2L0Z6SkJBRitBa3ZRVk9XVTN2U3JlNlltUjVkK3ZKRDNvRGxpRTV0L0ZzREpuMWRxWmk4bUVNVEV2bUV1OUFWSXN3aHdIdEJ6L2xZKy9HRXZoS2hpZmttRFY0b0l1QTc1VGtaNERqV0ozS0ExM2kvS0Q4Y28zZjdZU0gycS9Tc2lKdjZzOXRtaVdyZW9pV0I3eVJIaG5FOHNRMmtWNkhXOXpMZmxyeGx3cWUwTWV0T3hhc3lZS1pZam95TXBmNDNyTUM1L1N1SFc2dWFqU0twQkp0VmpSSVpoLzF0UjRJZUptU2xMMy94c2g5Z0RHcUk3STZqcElwVUl0L3JNUzVEMFlSY25QSlVrcEcwc289IiwiZGF0YWtleSI6IkFRSUJBSGlIV2FZVG5SVVdDYm56KzdMdk1HK0FQdlRIekhsQlVROUZxRW1WMjZCZHd3R3FXbmZieFl1V2k4Tm5oYjlJZWtPQUFBQUFmakI4QmdrcWhraUc5dzBCQndhZ2J6QnRBZ0VBTUdnR0NTcUdTSWIzRFFFSEFUQWVCZ2xnaGtnQlpRTUVBUzR3RVFRTWJueEUrOFl2K0F3YVJYY2RBZ0VRZ0RzS05BWkZmaHBlanJlN0ZITHlZVHdvb3BxVnBaRVVKaWpjQ1BkRFlrcE8yU2g0VHlpekFMNkdjb1FQVHNQaFRhaThoVklFaEJzaUYvWjY5dz09IiwidmVyc2lvbiI6IjIiLCJ0eXBlIjoiREFUQV9LRVkiLCJleHBpcmF0aW9uIjoxNzc0MDQ0NjQ5fQ
+'eyJwYXlsb2FkIjoiWC94bWJwcFgzMVRXaEdWMGtkWlFrTWUyTjdRM1VaYm1XRjNtQ0tnNVRZdG8vUS92YTl0OUpsL2UwR1k3SEZxK0s2aTBiSkF4TWR6WUoySXp0N3gyR0pxNHlraDB4d3UvOE1zRlpvSngrMHFxMnNRR2NnQVY4YURDT3FlZ2ZJUlF4cmhRcHVYRjM0TUFUVTBKaTM5RitNQnlmY3JGenU3UXZPcVA5WWdjSU1CY1FmQTBjdnRyTEN3ZlFGODQ2QnZHVlIvSXRUMnExWXZldE15Zm1XajhlSkxMeGw4dzI0Smk0MkFqM0lRWlZPUEZuZUJCV0tnNXFvTUJ1YVNwMUJwMXd4dzFzSFZqajFuc1ZoeEY4NFh0MkZPRnJPeEx6MUhxZlJqZTlVL0JWejZqandMSXdrT2daQzVzbGptMWVpNzZ1blRvLy8rN2xYWGNybDU3N3d1LzlMWkJZTUFoQ05LRFhJN2ZzMGJGSGFMVlFGZ1JwQUg0MzZ5VG9ndDNBU2txVURYRWxwN25iMGNkODVnTFY3dDBNdkNDanIreHdqWlk4M29QLzJqS3h5dTFIOFJIWUxRdU90T3puSTMybGhKME54UWQzaCtUWjhIRVRxV05ja1JOem9CZkp4V1dIRUM1RGRESWJXSExiUXYxRy9kMlZIZU9aQzF2dGxVZlNlOThNTklueVBwak44VkRST1h2bEl0eVpiRFRKZ3p1QjhRc2ljRktOMFcxSmViUHdyVnBSMHBhNWJheHBJNm5zS2h1eGZvQXo2SE5FOEJQSDBoRzZJSmRxa3BsdThRUVZqRVdEaDg0eWhTK3c3K0tYNWUxb1pWeUorQXBid3NMY3REWGd5MzVWR08zWmowOTI2ZFNlQmd2SWJtYWtYT2srcVBYWGFEdGR4RVcySGFRUnR6Slo3S2hRT2o1SFpuclpoMjhhd1FrUUZhcDg2L0Z6SkJBRitBa3ZRVk9XVTN2U3JlNlltUjVkK3ZKRDNvRGxpRTV0L0ZzREpuMWRxWmk4bUVNVEV2bUV1OUFWSXN3aHdIdEJ6L2xZKy9HRXZoS2hpZmttRFY0b0l1QTc1VGtaNERqV0ozS0ExM2kvS0Q4Y28zZjdZU0gycS9Tc2lKdjZzOXRtaVdyZW9pV0I3eVJIaG5FOHNRMmtWNkhXOXpMZmxyeGx3cWUwTWV0T3hhc3lZS1pZam95TXBmNDNyTUM1L1N1SFc2dWFqU0twQkp0VmpSSVpoLzF0UjRJZUptU2xMMy94c2g5Z0RHcUk3STZqcElwVUl0L3JNUzVEMFlSY25QSlVrcEcwc289IiwiZGF0YWtleSI6IkFRSUJBSGlIV2FZVG5SVVdDYm56KzdMdk1HK0FQdlRIekhsQlVROUZxRW1WMjZCZHd3R3FXbmZieFl1V2k4Tm5oYjlJZWtPQUFBQUFmakI4QmdrcWhraUc5dzBCQndhZ2J6QnRBZ0VBTUdnR0NTcUdTSWIzRFFFSEFUQWVCZ2xnaGtnQlpRTUVBUzR3RVFRTWJueEUrOFl2K0F3YVJYY2RBZ0VRZ0RzS05BWkZmaHBlanJlN0ZITHlZVHdvb3BxVnBaRVVKaWpjQ1BkRFlrcE8yU2g0VHlpekFMNkdjb1FQVHNQaFRhaThoVklFaEJzaUYvWjY5dz09IiwidmVyc2lvbiI6IjIiLCJ0eXBlIjoiREFUQV9LRVkiLCJleHBpcmF0aW9uIjoxNzc0MDQ0NjQ5fQ' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\LOKESH D\Brain-Tasks-App>kubectl create secret docker-registry ecr-secret --docker-server=064863113663.dkr.ecr.ap-south-1.amazonaws.com --docker-username=AWS --docker-password=PASTE_HERE --docker-email=none
+secret/ecr-secret created
+
+C:\Users\LOKESH D\Brain-Tasks-App>kubectl apply -f deployment.yaml
+deployment.apps/brain-app unchanged
+
+C:\Users\LOKESH D\Brain-Tasks-App>notepad token.txt
+
+C:\Users\LOKESH D\Brain-Tasks-App>kubectl delete secret ecr-secret
+secret "ecr-secret" deleted from default namespace
+
+C:\Users\LOKESH D\Brain-Tasks-App>kubectl create secret docker-registry ecr-secret --docker-server=064863113663.dkr.ecr.ap-south-1.amazonaws.com --docker-username=AWS --docker-password=eyJwYXlsb2FkIjoiWC94bWJwcFgzMVRXaEdWMGtkWlFrTWUyTjdRM1VaYm1XRjNtQ0tnNVRZdG8vUS92YTl0OUpsL2UwR1k3SEZxK0s2aTBiSkF4TWR6WUoySXp0N3gyR0pxNHlraDB4d3UvOE1zRlpvSngrMHFxMnNRR2NnQVY4YURDT3FlZ2ZJUlF4cmhRcHVYRjM0TUFUVTBKaTM5RitNQnlmY3JGenU3UXZPcVA5WWdjSU1CY1FmQTBjdnRyTEN3ZlFGODQ2QnZHVlIvSXRUMnExWXZldE15Zm1XajhlSkxMeGw4dzI0Smk0MkFqM0lRWlZPUEZuZUJCV0tnNXFvTUJ1YVNwMUJwMXd4dzFzSFZqajFuc1ZoeEY4NFh0MkZPRnJPeEx6MUhxZlJqZTlVL0JWejZqandMSXdrT2daQzVzbGptMWVpNzZ1blRvLy8rN2xYWGNybDU3N3d1LzlMWkJZTUFoQ05LRFhJN2ZzMGJGSGFMVlFGZ1JwQUg0MzZ5VG9ndDNBU2txVURYRWxwN25iMGNkODVnTFY3dDBNdkNDanIreHdqWlk4M29QLzJqS3h5dTFIOFJIWUxRdU90T3puSTMybGhKME54UWQzaCtUWjhIRVRxV05ja1JOem9CZkp4V1dIRUM1RGRESWJXSExiUXYxRy9kMlZIZU9aQzF2dGxVZlNlOThNTklueVBwak44VkRST1h2bEl0eVpiRFRKZ3p1QjhRc2ljRktOMFcxSmViUHdyVnBSMHBhNWJheHBJNm5zS2h1eGZvQXo2SE5FOEJQSDBoRzZJSmRxa3BsdThRUVZqRVdEaDg0eWhTK3c3K0tYNWUxb1pWeUorQXBid3NMY3REWGd5MzVWR08zWmowOTI2ZFNlQmd2SWJtYWtYT2srcVBYWGFEdGR4RVcySGFRUnR6Slo3S2hRT2o1SFpuclpoMjhhd1FrUUZhcDg2L0Z6SkJBRitBa3ZRVk9XVTN2U3JlNlltUjVkK3ZKRDNvRGxpRTV0L0ZzREpuMWRxWmk4bUVNVEV2bUV1OUFWSXN3aHdIdEJ6L2xZKy9HRXZoS2hpZmttRFY0b0l1QTc1VGtaNERqV0ozS0ExM2kvS0Q4Y28zZjdZU0gycS9Tc2lKdjZzOXRtaVdyZW9pV0I3eVJIaG5FOHNRMmtWNkhXOXpMZmxyeGx3cWUwTWV0T3hhc3lZS1pZam95TXBmNDNyTUM1L1N1SFc2dWFqU0twQkp0VmpSSVpoLzF0UjRJZUptU2xMMy94c2g5Z0RHcUk3STZqcElwVUl0L3JNUzVEMFlSY25QSlVrcEcwc289IiwiZGF0YWtleSI6IkFRSUJBSGlIV2FZVG5SVVdDYm56KzdMdk1HK0FQdlRIekhsQlVROUZxRW1WMjZCZHd3R3FXbmZieFl1V2k4Tm5oYjlJZWtPQUFBQUFmakI4QmdrcWhraUc5dzBCQndhZ2J6QnRBZ0VBTUdnR0NTcUdTSWIzRFFFSEFUQWVCZ2xnaGtnQlpRTUVBUzR3RVFRTWJueEUrOFl2K0F3YVJYY2RBZ0VRZ0RzS05BWkZmaHBlanJlN0ZITHlZVHdvb3BxVnBaRVVKaWpjQ1BkRFlrcE8yU2g0VHlpekFMNkdjb1FQVHNQaFRhaThoVklFaEJzaUYvWjY5dz09IiwidmVyc2lvbiI6IjIiLCJ0eXBlIjoiREFUQV9LRVkiLCJleHBpcmF0aW9uIjoxNzc0MDQ0NjQ5fQ== --docker-email=none
+secret/ecr-secret created
+
+C:\Users\LOKESH D\Brain-Tasks-App>kubectl apply -f deployment.yaml
+deployment.apps/brain-app unchanged
+
+C:\Users\LOKESH D\Brain-Tasks-App>kubectl apply -f deployment.yaml
+deployment.apps/brain-app unchanged
+
+C:\Users\LOKESH D\Brain-Tasks-App>notepad deployment.yaml
+
+C:\Users\LOKESH D\Brain-Tasks-App>kubectl apply -f deployment.yaml
+The request is invalid: patch: Invalid value: "map[metadata:map[annotations:map[kubectl.kubernetes.io/last-applied-configuration:{\"apiVersion\":\"apps/v1\",\"kind\":\"Deployment\",\"metadata\":{\"annotations\":{},\"name\":\"brain-app\",\"namespace\":\"default\"},\"spec\":{\"containers\":[{\"image\":\"064863113663.dkr.ecr.ap-south-1.amazonaws.com/brain-app:latest\",\"name\":\"brain-app\",\"ports\":[{\"containerPort\":80}]}],\"imagePullSecrets\":[{\"name\":\"ecr-secret\"}],\"replicas\":2,\"selector\":{\"matchLabels\":{\"app\":\"brain-app\"}},\"template\":{\"metadata\":{\"labels\":{\"app\":\"brain-app\"}},\"spec\":null}}}\n]] spec:map[containers:[map[image:064863113663.dkr.ecr.ap-south-1.amazonaws.com/brain-app:latest name:brain-app ports:[map[containerPort:80]]]] imagePullSecrets:[map[name:ecr-secret]] template:map[spec:<nil>]]]": strict decoding error: unknown field "spec.containers", unknown field "spec.imagePullSecrets"
+
+C:\Users\LOKESH D\Brain-Tasks-App>notepad deployment.yaml
+
+C:\Users\LOKESH D\Brain-Tasks-App>kubectl apply -f deployment.yaml
+deployment.apps/brain-app configured
+
+C:\Users\LOKESH D\Brain-Tasks-App>kubectl apply -f deployment.yaml
+deployment.apps/brain-app unchanged
+
+C:\Users\LOKESH D\Brain-Tasks-App>kubectl apply -f deployment.yaml
+deployment.apps/brain-app unchanged
+
+C:\Users\LOKESH D\Brain-Tasks-App>kubectl rollout restart deployment brain-app
+deployment.apps/brain-app restarted
+
+C:\Users\LOKESH D\Brain-Tasks-App>kubectl rollout restart deployment brain-app
+deployment.apps/brain-app restarted
+
+C:\Users\LOKESH D\Brain-Tasks-App>kubectl get pods
+NAME                         READY   STATUS    RESTARTS   AGE
+brain-app-64c977bdb7-hf9r9   1/1     Running   0          11s
+brain-app-64c977bdb7-mwbnl   1/1     Running   0          7s
+
+C:\Users\LOKESH D\Brain-Tasks-App>kubectl get svc
+NAME         TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE
+brain-app    NodePort    10.102.225.19   <none>        80:31036/TCP   4h37m
+kubernetes   ClusterIP   10.96.0.1       <none>        443/TCP        4h49m
+
+C:\Users\LOKESH D\Brain-Tasks-App>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   deployment.yaml
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        token.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\LOKESH D\Brain-Tasks-App>cd..
+
+C:\Users\LOKESH D>git status
+fatal: not a git repository (or any of the parent directories): .git
+
+C:\Users\LOKESH D>git version
+git version 2.52.0.windows.1
+
+C:\Users\LOKESH D>git status
+fatal: not a git repository (or any of the parent directories): .git
+
+C:\Users\LOKESH D>cd Brain-Tasks-App
+
+C:\Users\LOKESH D\Brain-Tasks-App>notepad .gitignore
+
+C:\Users\LOKESH D\Brain-Tasks-App>git add .
+
+C:\Users\LOKESH D\Brain-Tasks-App>git commit -m "Updated deployment to use ECR and added imagePullSecrets"
+[main a6f38e2] Updated deployment to use ECR and added imagePullSecrets
+ 2 files changed, 7 insertions(+), 4 deletions(-)
+ create mode 100644 .gitignore
+
+C:\Users\LOKESH D\Brain-Tasks-App>git push origin main
+To https://github.com/dlokeshmech-glitch/Brain-Tasks-App.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/dlokeshmech-glitch/Brain-Tasks-App.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+C:\Users\LOKESH D\Brain-Tasks-App>git pull origin main --rebase
+remote: Enumerating objects: 14, done.
+remote: Counting objects: 100% (14/14), done.
+remote: Compressing objects: 100% (12/12), done.
+remote: Total 12 (delta 6), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (12/12), 4.03 KiB | 46.00 KiB/s, done.
+From https://github.com/dlokeshmech-glitch/Brain-Tasks-App
+ * branch            main       -> FETCH_HEAD
+   f2fbc25..383f791  main       -> origin/main
+Auto-merging deployment.yaml
+CONFLICT (content): Merge conflict in deployment.yaml
+error: could not apply a6f38e2... Updated deployment to use ECR and added imagePullSecrets
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+hint: Disable this message with "git config set advice.mergeConflict false"
+Could not apply a6f38e2... # Updated deployment to use ECR and added imagePullSecrets
+
+C:\Users\LOKESH D\Brain-Tasks-App>notepad deployment.yaml
+
+C:\Users\LOKESH D\Brain-Tasks-App>git add deployment.yaml
+
+C:\Users\LOKESH D\Brain-Tasks-App>git rebase --continue
+[detached HEAD 63dd430] Updated deployment to use ECR and added imagePullSecrets
+ 2 files changed, 7 insertions(+), 4 deletions(-)
+ create mode 100644 .gitignore
+Successfully rebased and updated refs/heads/main.
+
+C:\Users\LOKESH D\Brain-Tasks-App>git push origin main
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 467 bytes | 467.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/dlokeshmech-glitch/Brain-Tasks-App.git
+   383f791..63dd430  main -> main
+
+C:\Users\LOKESH D\Brain-Tasks-App>git commit -am "trigger pipeline test"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+C:\Users\LOKESH D\Brain-Tasks-App>git push origin main
+Everything up-to-date
+
+C:\Users\LOKESH D\Brain-Tasks-App>aws eks update-kubeconfig --region ap-south-1 --name brain-app-cluster
+Added new context arn:aws:eks:ap-south-1:064863113663:cluster/brain-app-cluster to C:\Users\LOKESH D\.kube\config
+
+C:\Users\LOKESH D\Brain-Tasks-App>kubectl get nodes
+NAME                  STATUS   ROLES    AGE     VERSION
+i-048c099b1095b7d6e   Ready    <none>   2m32s   v1.35.0-eks-ac2d5a0
+i-0e659e9a5c85216e3   Ready    <none>   2m33s   v1.35.0-eks-ac2d5a0
+
+C:\Users\LOKESH D\Brain-Tasks-App>kubectl apply -f deployment.yaml
+deployment.apps/brain-app created
+
+C:\Users\LOKESH D\Brain-Tasks-App>kubectl apply -f service.yaml
+error: the path "service.yaml" does not exist
+
+C:\Users\LOKESH D\Brain-Tasks-App>dir
+ Volume in drive C is Windows
+ Volume Serial Number is 2A99-05BD
+
+ Directory of C:\Users\LOKESH D\Brain-Tasks-App
+
+20-03-2026  16:12    <DIR>          .
+20-03-2026  16:18    <DIR>          ..
+20-03-2026  16:12                 9 .gitignore
+20-03-2026  16:12               605 buildspec.yml
+20-03-2026  16:16               451 deployment.yaml
+20-03-2026  10:06    <DIR>          dist
+20-03-2026  10:41               209 Dockerfile
+20-03-2026  10:06             1,801 README.md
+20-03-2026  15:42             1,758 token.txt
+               6 File(s)          4,833 bytes
+               3 Dir(s)  47,411,544,064 bytes free
+
+C:\Users\LOKESH D\Brain-Tasks-App>notepad service.yaml
+
+C:\Users\LOKESH D\Brain-Tasks-App>kubectl apply -f service.yaml
+service/brain-app-service created
+
+C:\Users\LOKESH D\Brain-Tasks-App>kubectl get svc
+NAME                TYPE           CLUSTER-IP       EXTERNAL-IP   PORT(S)        AGE
+brain-app-service   LoadBalancer   10.100.139.219   <pending>     80:32383/TCP   9s
+kubernetes          ClusterIP      10.100.0.1       <none>        443/TCP        9m38s
+
+C:\Users\LOKESH D\Brain-Tasks-App>kubectl get svc
+NAME                TYPE           CLUSTER-IP       EXTERNAL-IP   PORT(S)        AGE
+brain-app-service   LoadBalancer   10.100.139.219   <pending>     80:32383/TCP   2m54s
+kubernetes          ClusterIP      10.100.0.1       <none>        443/TCP        12m
+
+C:\Users\LOKESH D\Brain-Tasks-App>kubectl get svc
+NAME                TYPE           CLUSTER-IP       EXTERNAL-IP   PORT(S)        AGE
+brain-app-service   LoadBalancer   10.100.139.219   <pending>     80:32383/TCP   3m25s
+kubernetes          ClusterIP      10.100.0.1       <none>        443/TCP        12m
+
+C:\Users\LOKESH D\Brain-Tasks-App>kubectl get svc
+NAME                TYPE           CLUSTER-IP       EXTERNAL-IP   PORT(S)        AGE
+brain-app-service   LoadBalancer   10.100.139.219   <pending>     80:32383/TCP   14m
+kubernetes          ClusterIP      10.100.0.1       <none>        443/TCP        24m
+
+C:\Users\LOKESH D\Brain-Tasks-App>kubectl describe svc brain-app-service
+Name:                     brain-app-service
+Namespace:                default
+Labels:                   <none>
+Annotations:              <none>
+Selector:                 app=brain-app
+Type:                     LoadBalancer
+IP Family Policy:         SingleStack
+IP Families:              IPv4
+IP:                       10.100.139.219
+IPs:                      10.100.139.219
+Port:                     <unset>  80/TCP
+TargetPort:               80/TCP
+NodePort:                 <unset>  32383/TCP
+Endpoints:
+Session Affinity:         None
+External Traffic Policy:  Cluster
+Internal Traffic Policy:  Cluster
+Events:
+  Type     Reason            Age                 From     Message
+  ----     ------            ----                ----     -------
+  Warning  FailedBuildModel  13m (x15 over 15m)  service  Failed build model due to unable to resolve at least one subnet (0 match VPC and tags: [kubernetes.io/role/internal-elb])
+  Warning  FailedBuildModel  97s (x18 over 12m)  service  Failed build model due to unable to resolve at least one subnet (0 match VPC and tags: [kubernetes.io/role/internal-elb])
+
+C:\Users\LOKESH D\Brain-Tasks-App>kubectl delete svc brain-app-service
+service "brain-app-service" deleted from default namespace
+
+C:\Users\LOKESH D\Brain-Tasks-App>kubectl apply -f service.yaml
+service/brain-app-service created
+
+C:\Users\LOKESH D\Brain-Tasks-App>kubectl get svc
+NAME                TYPE           CLUSTER-IP       EXTERNAL-IP   PORT(S)        AGE
+brain-app-service   LoadBalancer   10.100.225.175   <pending>     80:30845/TCP   14s
+kubernetes          ClusterIP      10.100.0.1       <none>        443/TCP        36m
+
+C:\Users\LOKESH D\Brain-Tasks-App>kubectl get svc
+NAME                TYPE           CLUSTER-IP       EXTERNAL-IP   PORT(S)        AGE
+brain-app-service   LoadBalancer   10.100.225.175   <pending>     80:30845/TCP   35s
+kubernetes          ClusterIP      10.100.0.1       <none>        443/TCP        36m
+
+C:\Users\LOKESH D\Brain-Tasks-App>kubectl get svc
+NAME                TYPE           CLUSTER-IP       EXTERNAL-IP   PORT(S)        AGE
+brain-app-service   LoadBalancer   10.100.225.175   <pending>     80:30845/TCP   8m10s
+kubernetes          ClusterIP      10.100.0.1       <none>        443/TCP        44m
+
+C:\Users\LOKESH D\Brain-Tasks-App>kubectl describe svc brain-app-service
+Name:                     brain-app-service
+Namespace:                default
+Labels:                   <none>
+Annotations:              <none>
+Selector:                 app=brain-app
+Type:                     LoadBalancer
+IP Family Policy:         SingleStack
+IP Families:              IPv4
+IP:                       10.100.225.175
+IPs:                      10.100.225.175
+Port:                     <unset>  80/TCP
+TargetPort:               80/TCP
+NodePort:                 <unset>  30845/TCP
+Endpoints:
+Session Affinity:         None
+External Traffic Policy:  Cluster
+Internal Traffic Policy:  Cluster
+Events:
+  Type     Reason            Age    From     Message
+  ----     ------            ----   ----     -------
+  Warning  FailedBuildModel  8m21s  service  Failed build model due to unable to resolve at least one subnet (0 match VPC and tags: [kubernetes.io/role/internal-elb])
+
+C:\Users\LOKESH D\Brain-Tasks-App>notepad service.yaml
+
+C:\Users\LOKESH D\Brain-Tasks-App>kubectl delete svc brain-app-service
+service "brain-app-service" deleted from default namespace
+
+C:\Users\LOKESH D\Brain-Tasks-App>kubectl apply -f service.yaml
+service/brain-app-service created
+
+C:\Users\LOKESH D\Brain-Tasks-App>kubectl describe svc brain-app-service
+Name:                     brain-app-service
+Namespace:                default
+Labels:                   <none>
+Annotations:              service.beta.kubernetes.io/aws-load-balancer-scheme: internet-facing
+Selector:                 app=brain-app
+Type:                     LoadBalancer
+IP Family Policy:         SingleStack
+IP Families:              IPv4
+IP:                       10.100.28.69
+IPs:                      10.100.28.69
+LoadBalancer Ingress:     k8s-default-brainapp-116bcdd3fa-9289fd3bb56d7a3a.elb.ap-south-1.amazonaws.com
+Port:                     <unset>  80/TCP
+TargetPort:               80/TCP
+NodePort:                 <unset>  31892/TCP
+Endpoints:
+Session Affinity:         None
+External Traffic Policy:  Cluster
+Internal Traffic Policy:  Cluster
+Events:
+  Type    Reason                  Age   From     Message
+  ----    ------                  ----  ----     -------
+  Normal  SuccessfullyReconciled  10s   service  Successfully reconciled
+
+C:\Users\LOKESH D\Brain-Tasks-App>kubectl get svc
+NAME                TYPE           CLUSTER-IP     EXTERNAL-IP                                                                     PORT(S)        AGE
+brain-app-service   LoadBalancer   10.100.28.69   k8s-default-brainapp-116bcdd3fa-9289fd3bb56d7a3a.elb.ap-south-1.amazonaws.com   80:31892/TCP   28s
+kubernetes          ClusterIP      10.100.0.1     <none>                                                                          443/TCP        47m
+
+C:\Users\LOKESH D\Brain-Tasks-App>kubectl get svc
+NAME                TYPE           CLUSTER-IP     EXTERNAL-IP                                                                     PORT(S)        AGE
+brain-app-service   LoadBalancer   10.100.28.69   k8s-default-brainapp-116bcdd3fa-9289fd3bb56d7a3a.elb.ap-south-1.amazonaws.com   80:31892/TCP   10m
+kubernetes          ClusterIP      10.100.0.1     <none>                                                                          443/TCP        57m
+
+C:\Users\LOKESH D\Brain-Tasks-App>kubectl get pods
+NAME                         READY   STATUS             RESTARTS   AGE
+brain-app-866546779b-fgp5t   0/1     ImagePullBackOff   0          14m
+brain-app-866546779b-zwvfv   0/1     ImagePullBackOff   0          14m
+
+C:\Users\LOKESH D\Brain-Tasks-App>kubectl describe svc brain-app-service
+Name:                     brain-app-service
+Namespace:                default
+Labels:                   <none>
+Annotations:              service.beta.kubernetes.io/aws-load-balancer-scheme: internet-facing
+Selector:                 app=brain-app
+Type:                     LoadBalancer
+IP Family Policy:         SingleStack
+IP Families:              IPv4
+IP:                       10.100.28.69
+IPs:                      10.100.28.69
+LoadBalancer Ingress:     k8s-default-brainapp-116bcdd3fa-9289fd3bb56d7a3a.elb.ap-south-1.amazonaws.com
+Port:                     <unset>  80/TCP
+TargetPort:               80/TCP
+NodePort:                 <unset>  31892/TCP
+Endpoints:
+Session Affinity:         None
+External Traffic Policy:  Cluster
+Internal Traffic Policy:  Cluster
+Events:
+  Type    Reason                  Age                  From     Message
+  ----    ------                  ----                 ----     -------
+  Normal  SuccessfullyReconciled  7m20s (x2 over 11m)  service  Successfully reconciled
+
+C:\Users\LOKESH D\Brain-Tasks-App>
