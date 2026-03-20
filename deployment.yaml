@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: brain-app
-        image: lokeshdev7/brain-app:latest
+        image: 064863113663.dkr.ecr.ap-south-1.amazonaws.com/brain-app:latest
         ports:
         - containerPort: 80
