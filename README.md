@@ -1,44 +1,104 @@
-**Project Overview**
+# 🚀 DevOps CI/CD Project – Brain Tasks App
 
-This project demonstrates a complete CI/CD pipeline using AWS services. The application is containerized using Docker and deployed on Kubernetes (Amazon EKS) with a LoadBalancer for public access.
+## 📌 Project Overview
 
-**Technologies Used**
+This project demonstrates a complete CI/CD pipeline using AWS services. The application is containerized using Docker, built using AWS CodeBuild, stored in Amazon ECR, and deployed on Kubernetes (Docker Desktop).
 
-GitHub (Version Control)
+---
 
-AWS CodeBuild (CI)
+## 🧱 Technologies Used
 
-Docker (Containerization)
+* GitHub (Version Control)
+* AWS CodePipeline (CI/CD Orchestration)
+* AWS CodeBuild (Build & Docker Image Creation)
+* Amazon ECR (Container Registry)
+* Docker (Containerization)
+* Kubernetes (Deployment - Docker Desktop)
+* AWS CloudWatch (Monitoring)
 
-Docker Hub (Image Registry)
+---
 
-Kubernetes (EKS)
+## 🔄 Pipeline Flow
 
-AWS CloudWatch (Monitoring)
+GitHub → CodePipeline → CodeBuild → ECR → Kubernetes → Application
 
-**Pipeline Flow**
-GitHub → CodeBuild → Docker → Docker Hub → EKS → LoadBalancer → Live App
-⚙️ Setup Instructions
-1. Clone Repository
+---
+
+## ⚙️ Setup Instructions
+
+### 1. Clone Repository
+
+```
 git clone https://github.com/dlokeshmech-glitch/Brain-Tasks-App
 cd Brain-Tasks-App
-2. Build Docker Image
-docker build -t lokeshdev7/brain-app .
-docker push lokeshdev7/brain-app
-3. Deploy to Kubernetes (EKS)
+```
+
+### 2. Build & Push Docker Image (Handled by CodeBuild)
+
+* Docker image is automatically built and pushed to ECR via CI pipeline
+
+### 3. Deploy to Kubernetes
+
+```
 kubectl apply -f deployment.yaml
 kubectl apply -f service.yaml
-4. Get Application URL
+```
+
+### 4. Access Application
+
+```
 kubectl get svc
-**Application URL**
-arn:aws:elasticloadbalancing:ap-south-1:064863113663:loadbalancer/net/k8s-default-brainapp-116bcdd3fa/9289fd3bb56d7a3a
+```
 
-**Monitoring**
+---
 
-CloudWatch Logs used for build monitoring
+## 🌐 Application URL
 
-** Kubernetes**
+http://localhost:31036
+
+---
+
+## 📊 Monitoring
+
+* AWS CloudWatch Logs used to monitor CodeBuild execution
+* CodePipeline used to track CI/CD flow
+
+---
+
+## ☸️ Kubernetes Commands
+
+```
 kubectl get pods
 kubectl get svc
-## Architecture
+```
+
+---
+
+## 🧩 Architecture
+
 GitHub → CodePipeline → CodeBuild → ECR → Kubernetes
+
+---
+
+## ✅ CI/CD Verification
+
+Whenever code is pushed to GitHub:
+
+* CodePipeline triggers automatically
+* CodeBuild builds Docker image
+* Image is pushed to ECR
+* Kubernetes pulls latest image and runs the application
+
+---
+
+## ⚠️ Note
+
+* Deployment is triggered manually using:
+
+```
+kubectl rollout restart deployment brain-app
+```
+
+* For production, AWS EKS with automated deployment can be used.
+
+---
