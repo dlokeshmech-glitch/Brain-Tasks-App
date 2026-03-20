@@ -90,15 +90,3 @@ Whenever code is pushed to GitHub:
 * Kubernetes pulls latest image and runs the application
 
 ---
-
-## ⚠️ Note
-
-* Deployment is triggered manually using:
-
-```
-kubectl rollout restart deployment brain-app
-```
-
-* For production, AWS EKS with automated deployment can be used.
-
----
