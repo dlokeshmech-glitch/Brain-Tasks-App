@@ -12,8 +12,10 @@ spec:
       labels:
         app: brain-app
     spec:
+      imagePullSecrets:
+        - name: ecr-secret
       containers:
-      - name: brain-app
-        image: 064863113663.dkr.ecr.ap-south-1.amazonaws.com/brain-app:latest
-        ports:
-        - containerPort: 80
+        - name: brain-app
+          image: 064863113663.dkr.ecr.ap-south-1.amazonaws.com/brain-app:latest
+          ports:
+            - containerPort: 80
