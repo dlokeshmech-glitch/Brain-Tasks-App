@@ -40,3 +40,5 @@ CloudWatch Logs used for build monitoring
 ** Kubernetes**
 kubectl get pods
 kubectl get svc
+## Architecture
+GitHub → CodePipeline → CodeBuild → ECR → Kubernetes
